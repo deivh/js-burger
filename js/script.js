@@ -13,9 +13,10 @@ generateBtn.addEventListener ('click', function(){
         for (var i=0; i<check.length; i++) {
             var checkFor = check[i];
             var checkTrue = checkFor.checked;
-            var priceAdd = parseInt(checkFor.dataset.price);
+            if (checkTrue) {var priceAdd = parseInt(checkFor.dataset.price);
             console.log(checkFor, checkTrue, priceAdd);
             priceTotal += priceAdd;
+            }
         }
         console.log(priceTotal);
         var coupon = ['BU0N01LP4N1N0', 'BU0N01LP4N1N2', 'BU0N01LP4N1N3', 'BU0N01LP4N1N4']
